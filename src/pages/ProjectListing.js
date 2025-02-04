@@ -1,28 +1,39 @@
+import { useDispatch, useSelector } from "react-redux";
 import Projects from "../components/Projects";
+import { useEffect } from "react";
+import { fetchProjects } from "../features/project/projectSlice";
 
 function ProjectListing() {
-  const mockProjects = [
-    {
-      id: 1,
-      title: "Project 1",
-      description: "Description 1",
-      image: "img1.jpg",
-      projectLink: "/",
-      githubLink: "/",
-    },
-    {
-      id: 2,
-      title: "Project 2",
-      description: "Description 2",
-      image: "img2.jpg",
-      projectLink: "/",
-      githubLink: "/",
-    },
-  ];
+  const dispatch = useDispatch();
+  const { status, error, projects } = useSelector((state) => state.project);
+
+  useEffect(() => {
+    dispatch(fetchProjects());
+  }, [dispatch]);
+
+  if (status === "loading") {
+    return (
+      <div className="py-5 bg-light">
+        <p className="text-center">Loading...</p>
+      </div>
+    );
+  }
+
+  if (status === "error") {
+    return (
+      <div className="py-5 bg-light">
+        <p className="text-center">Error: {error}</p>
+      </div>
+    );
+  }
 
   return (
     <div className="py-5 bg-light">
-      <Projects projects={mockProjects} />
+      {projects.length > 0 ? (
+        <Projects projects={projects} />
+      ) : (
+        <p className="text-center">No project found.</p>
+      )}
     </div>
   );
 }

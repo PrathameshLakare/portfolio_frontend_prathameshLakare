@@ -13,6 +13,9 @@ function Blog({ blogs }) {
                 <div className="card shadow-sm h-100">
                   <div className="card-body d-flex flex-column">
                     <h5 className="card-title text-center">{blog.title}</h5>
+                    <p className="card-text text-center text-muted">
+                      {blog.blogDescription}
+                    </p>
                     <div className="mt-auto text-center">
                       <Link
                         to={blog.link}

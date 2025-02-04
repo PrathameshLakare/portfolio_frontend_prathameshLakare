@@ -19,7 +19,14 @@ function About() {
           code.
         </p>
       </div>
-      <div data-aos="fade-up" data-aos-delay="200">
+    </section>
+  );
+}
+
+export default About;
+
+{
+  /* <div data-aos="fade-up" data-aos-delay="200">
         <a
           href="/path-to-your-resume.pdf"
           target="_blank"
@@ -28,9 +35,5 @@ function About() {
         >
           View Resume
         </a>
-      </div>
-    </section>
-  );
+      </div> */
 }
-
-export default About;
