@@ -11,15 +11,6 @@ function Projects({ projects }) {
             projects.map((project, index) => (
               <div className="col-md-4 mb-4" key={index}>
                 <div className="card shadow-sm h-100">
-                  <img
-                    src={"https://via.placeholder.com/300"}
-                    className="card-img-top rounded-top"
-                    alt={project.title}
-                    style={{
-                      maxHeight: "200px",
-                      objectFit: "cover",
-                    }}
-                  />
                   <div className="card-body d-flex flex-column">
                     <h5 className="card-title text-center">{project.title}</h5>
                     <p className="card-text text-center text-muted">
