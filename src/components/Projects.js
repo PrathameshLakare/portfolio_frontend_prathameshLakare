@@ -24,7 +24,7 @@ function Projects({ projects }) {
                       <div className="mt-auto text-center">
                         <Link
                           to={project.projectLink}
-                          className="btn btn-primary me-2"
+                          className="btn btn-primary me-2 my-2"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -32,7 +32,7 @@ function Projects({ projects }) {
                         </Link>
                         <Link
                           to={project.githubLink}
-                          className="btn btn-outline-secondary"
+                          className="btn btn-outline-secondary my-2"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
