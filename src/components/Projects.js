@@ -24,7 +24,7 @@ function Projects({ projects }) {
                       <div className="mt-auto text-center">
                         <Link
                           to={project.projectLink}
-                          className="btn btn-primary me-2 my-2"
+                          className="btn btn-primary me-2 me-md-0 me-lg-2 my-2"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
