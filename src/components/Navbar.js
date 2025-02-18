@@ -6,9 +6,9 @@ function Nav() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
         <div className="container">
-          <a className="navbar-brand fw-bold" href="/">
-            IAMDEVLOPER
-          </a>
+          <Link className="navbar-brand fw-bold" to="/">
+            PRATHAMESH LAKARE
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
