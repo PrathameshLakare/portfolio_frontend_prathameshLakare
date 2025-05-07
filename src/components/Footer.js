@@ -40,9 +40,7 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <p className="text-center mt-4 mb-0">
-          &copy; 2025 Prathamesh Lakare. All Rights Reserved.
-        </p>
+        <p className="text-center mt-4 mb-0">&copy; 2025 Prathamesh Lakare.</p>
       </div>
     </footer>
   );

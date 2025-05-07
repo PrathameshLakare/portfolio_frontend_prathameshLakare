@@ -9,19 +9,19 @@ function Blog({ blogs }) {
         <div className="row">
           {blogs.length > 0 ? (
             blogs.map((blog, index) => (
-              <div className="col-md-6 mb-4" key={index}>
+              <div className="col-md-4 mb-4" key={index}>
                 <div className="card shadow-sm h-100">
                   <div className="card-body d-flex flex-column">
                     <h4 className="card-title text-center">{blog.title}</h4>
                     {blog.blogDescription && (
-                      <p className="card-text text-center text-muted">
+                      <p className="card-text text-center text-muted my-2">
                         {blog.blogDescription}
                       </p>
                     )}
                     <div className="mt-auto text-center">
                       <Link
                         to={blog.blogLink}
-                        className="btn btn-primary"
+                        className="btn btn-primary my-2"
                         target="_blank"
                         rel="noopener noreferrer"
                       >

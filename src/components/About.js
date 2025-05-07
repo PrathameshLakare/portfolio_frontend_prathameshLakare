@@ -14,7 +14,7 @@ function About() {
           About Me
         </h1>
         <p className="lead" data-aos="fade-in">
-          Hello! I’m <strong>Prathamesh Lakare</strong>, a passionate Software
+          Hello! I'm <strong>Prathamesh Lakare</strong>, a passionate Software
           Engineer. I enjoy building applications and solving problems through
           code.
         </p>
@@ -24,16 +24,3 @@ function About() {
 }
 
 export default About;
-
-{
-  /* <div data-aos="fade-up" data-aos-delay="200">
-        <a
-          href="/path-to-your-resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-outline-light"
-        >
-          View Resume
-        </a>
-      </div> */
-}
