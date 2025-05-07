@@ -20,7 +20,7 @@ function Blog({ blogs }) {
                     )}
                     <div className="mt-auto text-center">
                       <Link
-                        to={blog.link}
+                        to={blog.blogLink}
                         className="btn btn-primary"
                         target="_blank"
                         rel="noopener noreferrer"
