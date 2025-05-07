@@ -13,7 +13,7 @@ function Projects({ projects }) {
               .reverse()
               .map((project, index) => (
                 <div className="col-md-4 mb-4" key={index}>
-                  <div className="card shadow-sm h-100">
+                  <div className="card shadow-sm">
                     <div className="card-body d-flex flex-column">
                       <h4 className="card-title text-center">
                         {project.title}
@@ -21,15 +21,25 @@ function Projects({ projects }) {
                       <p className="card-text text-center text-muted">
                         {project.description}
                       </p>
+                      {project.tech && (
+                        <p>
+                          <strong>Technology: </strong>
+                          {project?.tech.split(", ").map((element, i) => (
+                            <span key={i} className="me-1 badge bg-primary">
+                              {element}
+                            </span>
+                          ))}
+                        </p>
+                      )}
                       <div className="mt-auto text-center">
-                        <Link
-                          to={project.projectLink}
-                          className="btn btn-primary me-2 me-md-0 me-lg-2 my-2"
+                        <a
+                          href={project.projectLink}
                           target="_blank"
                           rel="noopener noreferrer"
+                          className="btn btn-primary me-2"
                         >
                           View Project
-                        </Link>
+                        </a>
                         <Link
                           to={project.githubLink}
                           className="btn btn-outline-secondary my-2"
