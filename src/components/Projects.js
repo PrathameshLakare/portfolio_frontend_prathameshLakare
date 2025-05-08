@@ -25,7 +25,7 @@ function Projects({ projects }) {
                         <p>
                           <strong>Technology: </strong>
                           {project?.tech.split(", ").map((element, i) => (
-                            <span key={i} className="me-1 badge bg-primary">
+                            <span key={i} className="me-1 badge bg-secondary">
                               {element}
                             </span>
                           ))}
