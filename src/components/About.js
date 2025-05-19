@@ -18,6 +18,16 @@ function About() {
           Engineer. I enjoy building applications and solving problems through
           code.
         </p>
+        <div data-aos="fade-up" className="mt-4">
+          <a
+            href="https://res.cloudinary.com/dxhy9u126/image/upload/v1747390846/i2yzsmpbbqylgdulslxr.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-light"
+          >
+            View Resume
+          </a>
+        </div>
       </div>
     </section>
   );
