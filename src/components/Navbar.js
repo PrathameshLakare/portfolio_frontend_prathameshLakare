@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Nav() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  }, [darkMode]);
+
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+      <nav
+        className={`navbar navbar-expand-lg ${
+          darkMode ? "navbar-dark bg-dark" : "navbar-light bg-light"
+        } fixed-top shadow-sm`}
+      >
         <div className="container">
           <Link className="navbar-brand fw-bold" to="/">
             PRATHAMESH LAKARE
@@ -21,7 +35,7 @@ function Nav() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto">
+            <ul className="navbar-nav ms-auto align-items-center">
               <li className="nav-item">
                 <Link className="nav-link" to="/">
                   Home
@@ -36,6 +50,14 @@ function Nav() {
                 <Link className="nav-link" to="/blogs">
                   Blogs
                 </Link>
+              </li>
+              <li className="nav-item ms-3">
+                <button
+                  onClick={() => setDarkMode(!darkMode)}
+                  className="btn btn-outline-secondary btn-sm"
+                >
+                  {darkMode ? "Light Mode" : "Dark Mode"}
+                </button>
               </li>
             </ul>
           </div>

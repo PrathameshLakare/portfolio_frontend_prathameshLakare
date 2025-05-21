@@ -13,7 +13,7 @@ function ProjectListing() {
 
   if (status === "loading") {
     return (
-      <div className="py-5 bg-light">
+      <div className="py-5 status">
         <p className="text-center">Loading...</p>
       </div>
     );
@@ -21,14 +21,14 @@ function ProjectListing() {
 
   if (status === "error") {
     return (
-      <div className="py-5 bg-light">
+      <div className="py-5 status">
         <p className="text-center">Error: {error}</p>
       </div>
     );
   }
 
   return (
-    <div className="py-5 bg-light">
+    <div className="py-5">
       {projects.length > 0 ? (
         <Projects projects={projects} />
       ) : (

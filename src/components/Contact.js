@@ -6,11 +6,11 @@ function Contact() {
       <div className="container">
         <div className="row justify-content-center">
           <div
-            className="col-lg-8 text-center p-5 shadow-lg bg-white rounded"
+            className="col-lg-8 text-center p-5 shadow-lg home-card rounded"
             data-aos="fade-up"
           >
-            <h2 className="mb-4 text-primary fw-bold">Contact</h2>
-            <p className="lead text-muted mb-4">
+            <h2 className="mb-4 fw-bold">Contact</h2>
+            <p className="lead home-card-description mb-4">
               Feel free to reach out for collaborations, inquiries, or just to
               say hello! I’m always open to new opportunities.
             </p>

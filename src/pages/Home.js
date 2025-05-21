@@ -41,11 +41,11 @@ const Home = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div
-              className="col-lg-8 text-center p-4 shadow bg-white rounded"
+              className="col-lg-8 text-center p-4 shadow rounded home-card"
               data-aos="fade-up"
             >
-              <h2 className="mb-3 fw-bold text-primary">Projects</h2>
-              <p className="mb-4 text-muted">
+              <h2 className="mb-3 fw-bold">Projects</h2>
+              <p className="mb-4 home-card-description">
                 I like to showcase my work, and you can explore all my projects
                 hosted online.
               </p>
@@ -61,11 +61,11 @@ const Home = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div
-              className="col-lg-8 text-center p-4 shadow bg-white rounded"
+              className="col-lg-8 text-center p-4 shadow home-card rounded"
               data-aos="fade-up"
             >
-              <h2 className="mb-3 fw-bold text-primary">Blogs</h2>
-              <p className="mb-4 text-muted">
+              <h2 className="mb-3 fw-bold">Blogs</h2>
+              <p className="mb-4 home-card-description">
                 I enjoy working on blogs and documenting my learning and
                 experiences.
               </p>
