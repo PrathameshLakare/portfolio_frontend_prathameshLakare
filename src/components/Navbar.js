@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Nav() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem("darkMode");
+    return savedMode === "true";
+  });
 
   useEffect(() => {
     if (darkMode) {
@@ -10,6 +13,8 @@ function Nav() {
     } else {
       document.body.classList.remove("dark-mode");
     }
+
+    localStorage.setItem("darkMode", darkMode);
   }, [darkMode]);
 
   return (
