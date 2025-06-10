@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const url = process.env.REACT_APP_URL;
+const url = import.meta.env.VITE_API_URL;
 
 export const fetchBlogs = createAsyncThunk("blogs", async () => {
   const response = await axios.get(`${url}/blog`);

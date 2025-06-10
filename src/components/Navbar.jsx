@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Nav() {
   const [darkMode, setDarkMode] = useState(() => {
     const savedMode = localStorage.getItem("darkMode");
-    return savedMode === "true";
+    return savedMode !== null ? savedMode === "true" : true;
   });
 
   useEffect(() => {
