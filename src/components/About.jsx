@@ -1,33 +1,33 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
 function About() {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
-
   return (
-    <section id="about" className="py-5">
-      <div className="container text-center">
-        <h1 className="mb-4" data-aos="fade-up">
-          About Me
-        </h1>
-        <p className="lead" data-aos="fade-in">
-          Hello! I'm <strong>Prathamesh Lakare</strong>, a passionate Software
-          Engineer. I enjoy building applications and solving problems through
-          code.
-        </p>
-        <div data-aos="fade-up" className="mt-4">
-          <a
-            href="https://res.cloudinary.com/dxhy9u126/image/upload/v1747390846/i2yzsmpbbqylgdulslxr.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-light"
-          >
-            View Resume
-          </a>
-        </div>
+    <section id="about">
+      <div className="flex flex-col md:flex-row gap-10 ">
+        <main className="flex-1">
+          <h1 className="text-4xl font-bold mb-2">Hello! I’m Prathamesh</h1>
+          <div className="flex items-center gap-2 mb-4">
+            <h2 className="text-2xl text-yellow-600 font-semibold">
+              Fullstack Developer | MERN Stack
+            </h2>
+          </div>
+          <div className="">
+            <p className="text-1xl max-w-2xl text-muted-foreground mb-3">
+              Hi, I’m Prathamesh, a full-stack developer with expertise in the
+              MERN stack (MongoDB, Express.js, React, and Node.js). I enjoy
+              building responsive and efficient web applications with a strong
+              focus on clean design and performance. From developing interactive
+              front-end interfaces to building secure and scalable backend
+              systems, I’m comfortable working across the entire web development
+              process.
+            </p>
+            <p className="max-w-2xl text-muted-foreground mb-6">
+              I’m passionate about writing clean, maintainable code and
+              continuously improving my skills by exploring new technologies.
+              I’ve worked on several projects that reflect my problem-solving
+              approach and attention to detail. I'm driven by a desire to create
+              meaningful software that delivers real value to users.
+            </p>
+          </div>
+        </main>
       </div>
     </section>
   );
