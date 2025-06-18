@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { MailIcon, MapPin } from "lucide-react";
 import ToolsAndTechs from "@/components/ToolsAndTech";
 import { useNavigate } from "react-router-dom";
+import ContactCard from "@/components/ContactCard";
 
 const Home = () => {
   const [copied, setCopied] = useState(false);
@@ -74,6 +75,7 @@ const Home = () => {
         </div>
 
         <ToolsAndTechs />
+        <ContactCard />
       </main>
     </div>
   );
