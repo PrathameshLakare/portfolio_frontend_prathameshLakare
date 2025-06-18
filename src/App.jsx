@@ -6,7 +6,6 @@ import BlogPage from "./pages/BlogsPage";
 import { ThemeProvider } from "./components/theme-provider";
 import Layout from "./components/Layout";
 import { Toaster } from "sonner";
-import ContactCard from "./components/ContactCard";
 import AboutPage from "./pages/AboutPage";
 
 function App() {
@@ -25,7 +24,6 @@ function App() {
                     <Route path="/blogs" element={<BlogPage />} />
                     <Route path="/about" element={<AboutPage />} />
                   </Routes>
-                  <ContactCard />
                 </div>
               </div>
             </div>
