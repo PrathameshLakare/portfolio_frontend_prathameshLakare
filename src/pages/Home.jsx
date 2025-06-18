@@ -1,83 +1,80 @@
-import { useEffect } from "react";
-import Skills from "../components/Skills";
-import Contact from "../components/Contact";
-import About from "../components/About";
-
-import "aos/dist/aos.css";
-import AOS from "aos";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { MailIcon, MapPin } from "lucide-react";
+import ToolsAndTechs from "@/components/ToolsAndTech";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
+  const [copied, setCopied] = useState(false);
+  const navigate = useNavigate();
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("prathameshlakare001@gmail.com").then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    });
+  };
 
   return (
-    <div>
-      <div className="text-center py-5 bg-primary text-white">
-        <div className="container my-3">
-          <div className="row align-items-center">
-            <div className="col-md-6">
-              <img
-                src="/codeThink_Hero.svg"
-                alt="Hero"
-                className="img-fluid my-4 rounded object-fit w-100"
-                style={{
-                  maxWidth: "500px",
-                  animation: "fadeIn 1s ease-in-out",
-                }}
+    <div className="flex flex-col md:flex-row gap-10 ">
+      <main className="flex-1">
+        <h1 className="text-4xl font-bold mb-2">Hello! I’m Prathamesh</h1>
+        <div className="flex items-center gap-2 mb-4">
+          <h2 className="text-2xl text-yellow-600 font-semibold">
+            Fullstack Developer | MERN Stack
+          </h2>
+        </div>
+        <div className="flex items-center gap-2 mb-6">
+          <p className="flex items-center text-sm text-muted-foreground">
+            <MapPin className="w-4 h-4 mr-1" /> Nashik, Maharashtra, India
+          </p>
+        </div>
+
+        <p className="max-w-2xl text-muted-foreground mb-6">
+          Full-stack web developer specializing in the MERN stack. Proficient in
+          both frontend and backend development, with a strong focus on React,
+          Node.js, MongoDB, and Express.
+        </p>
+
+        <div className="flex gap-3 mb-10">
+          <Button variant="default" onClick={() => navigate("/about")}>
+            About
+          </Button>
+
+          <a
+            href="https://res.cloudinary.com/dxhy9u126/image/upload/v1747390846/i2yzsmpbbqylgdulslxr.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-md bg-yellow-600 text-white px-4 py-2 text-sm font-medium shadow hover:bg-yellow-700 transition"
+            download
+          >
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 16v-8m0 8l-4-4m4 4l4-4m-8 8h8a2 2 0 002-2V6a2 2 0 00-2-2H8a2 2 0 00-2 2v12a2 2 0 002 2z"
               />
-            </div>
-            <div className="col-md-6">
-              <About />
-            </div>
-          </div>
+            </svg>
+            Resume
+          </a>
+          <Button
+            variant="outline"
+            className="flex items-center gap-2"
+            onClick={handleCopy}
+            disabled={copied}
+          >
+            <MailIcon className="w-4 h-4" /> {copied ? "Copied!" : "Copy mail"}
+          </Button>
         </div>
-      </div>
 
-      <Skills />
-
-      <section className="py-5">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div
-              className="col-lg-8 text-center p-4 shadow rounded home-card"
-              data-aos="fade-up"
-            >
-              <h2 className="mb-3 fw-bold">Projects</h2>
-              <p className="mb-4 home-card-description">
-                I like to showcase my work, and you can explore all my projects
-                hosted online.
-              </p>
-              <Link to="/projects" className="btn btn-outline-primary px-4">
-                View Projects
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-5 bg-light">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div
-              className="col-lg-8 text-center p-4 shadow home-card rounded"
-              data-aos="fade-up"
-            >
-              <h2 className="mb-3 fw-bold">Blogs</h2>
-              <p className="mb-4 home-card-description">
-                I enjoy working on blogs and documenting my learning and
-                experiences.
-              </p>
-              <Link to="blogs" className="btn btn-outline-primary px-4">
-                Read Blogs
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Contact />
+        <ToolsAndTechs />
+      </main>
     </div>
   );
 };
