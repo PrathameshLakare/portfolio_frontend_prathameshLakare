@@ -95,7 +95,7 @@ export function AppSidebar() {
                 </p>
                 <p>
                   <a
-                    href="www.linkedin.com/in/prathamesh-lakare-8a3388206"
+                    href="https://www.linkedin.com/in/prathamesh-lakare-8a3388206"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
