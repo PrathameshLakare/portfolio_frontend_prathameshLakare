@@ -1,8 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import ContactCard from "./ContactCard";
 
 function Blogs({ blogs }) {
@@ -30,21 +28,12 @@ function Blogs({ blogs }) {
 
                     <div className="mt-auto flex  gap-3 pt-4">
                       <a
-                        href={blog.link}
+                        href={blog.blogLink}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <Button>Read Blog</Button>
                       </a>
-                      {blog.githubLink && (
-                        <Link
-                          to={blog.githubLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Button variant="outline">View Source</Button>
-                        </Link>
-                      )}
                     </div>
                   </CardContent>
                 </Card>
